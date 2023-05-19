@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:id="@+id/firstRL">
+
+            <EditText
+                android:id="@+id/firstNumber"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:textAlignment="center"
+                android:hint="Number 1"
+                android:inputType="number"/>
+
+            <EditText
+                android:id="@+id/secondNumber"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/firstNumber"
+                android:layout_marginTop="30dp"
+                android:textAlignment="center"
+                android:hint="Number 2"
+                android:inputType="number"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/firstRL"
+            android:id="@+id/firstLL">
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:rowCount="2"
+                android:layout_gravity="center">
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/addButton"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:text="Add"
+                    android:layout_marginRight="20dp"
+                    android:onClick="onAdd"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/subtractButton"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:text="Subtract"
+                    android:layout_marginLeft="20dp"
+                    android:onClick="onSubtract"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/multiplyButton"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:text="Multiply"
+                    android:layout_marginRight="20dp"
+                    android:onClick="onMultiply"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/divideButton"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:text="Divide"
+                    android:layout_marginLeft="20dp"
+                    android:onClick="onDivide"/>
+            </GridLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/firstLL"
+            android:layout_marginTop="150dp"
+            android:layout_centerHorizontal="true">
+            <TextView
+                android:id="@+id/result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:text="Result: "/>
+            <TextView
+                android:id="@+id/resultNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:text="0"/>
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

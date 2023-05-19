@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:id="@+id/firstRL2">
+
+            <EditText
+                android:id="@+id/firstNumber2"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:textAlignment="center"
+                android:hint="Number 1"
+                android:inputType="number"/>
+
+            <EditText
+                android:id="@+id/secondNumber2"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/firstNumber2"
+                android:layout_marginTop="30dp"
+                android:textAlignment="center"
+                android:hint="Number 2"
+                android:inputType="number"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/firstRL2"
+            android:id="@+id/firstLL2">
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:rowCount="2"
+                android:layout_gravity="center">
+                <Button
+                    android:id="@+id/addButton2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:text="+"
+                    android:textSize="30sp"
+                    android:layout_marginRight="20dp"
+
+                    />
+                <Button
+                    android:id="@+id/subtractButton2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:text="-"
+                    android:textSize="30sp"
+                    android:layout_marginLeft="20dp"/>
+                <Button
+                    android:id="@+id/multiplyButton2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:text="X"
+                    android:textSize="30sp"
+                    android:layout_marginRight="20dp"/>
+                <Button
+                    android:id="@+id/divideButton2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:text="/"
+                    android:textSize="30sp"
+                    android:layout_marginLeft="20dp"/>
+            </GridLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/firstLL2"
+            android:layout_marginTop="150dp"
+            android:layout_centerHorizontal="true">
+            <TextView
+                android:id="@+id/result2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:text="Result: "/>
+            <TextView
+                android:id="@+id/resultNumber2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:text="0"/>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
