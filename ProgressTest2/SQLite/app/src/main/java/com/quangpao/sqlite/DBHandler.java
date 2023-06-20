@@ -74,7 +74,7 @@ public class DBHandler extends SQLiteOpenHelper {
         return productModalArrayList;
     }
 
-    public void updateProduct(int id, String productName, String productDescription, String productPrice) {
+    public void updateProduct(String originalProductName, String productName, String productDescription, String productPrice) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
 
@@ -82,8 +82,7 @@ public class DBHandler extends SQLiteOpenHelper {
         values.put(DESCRIPTION_COL, productDescription);
         values.put(PRICE_COL, productPrice);
 
-        db.update(TABLE_NAME, values, ID_COL + " = ?", new String[]{String.valueOf(id)});
-
+        db.update(TABLE_NAME, values, "name= ?", new String[]{originalProductName});
         db.close();
     }
 
