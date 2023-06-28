@@ -13,4 +13,6 @@ public class Results {
     public String getName() {
         return superName;
     }
+
+    private void setName(String name) { this.superName = name; }
 }
